@@ -14,6 +14,8 @@ class GetText extends Controller
     {
         $response = json_decode(Http::get('https://icanhazdadjoke.com/slack'));
         $text = $response->attachments[0]->text;
-        echo $text;
+        return response()->json([
+            "text" => $text,
+        ], 200);
     }
 }
