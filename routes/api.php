@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\GetText;
+use App\Http\Controllers\GroupsOfTwo;
+use App\Http\Controllers\Nominee;
 use App\Http\Controllers\PalindromeController;
 use App\Http\Controllers\RandomRecipe;
 use App\Http\Controllers\SecondsPassed;
@@ -34,3 +36,9 @@ Route::get('/get-text', [GetText::class, 'getText'])->name("getText");
 
 // route that gets text part of response from https://icanhazdadjoke.com/slack
 Route::get('/random-recipe', [RandomRecipe::class, 'randomRecipe'])->name("randomRecipe");
+
+// route that returns a list of students grouped in twos
+Route::get('/groups-of-two', [GroupsOfTwo::class, 'groupsOfTwo'])->name("groupsOfTwo");
+
+// route that returns a list of students grouped in twos
+Route::get('/nominee', [Nominee::class, 'nominee'])->name("nominee");
